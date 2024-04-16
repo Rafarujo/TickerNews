@@ -1,6 +1,8 @@
 RSS TickerNews Editor
 
-Bem-vindo ao projeto RSS TickerNews Editor! Este projeto permite que você personalize e edite uma barra de notícias RSS para exibir notícias em tempo real em sua página web.
+Bem-vindo ao projeto RSS TickerNews Editor!
+
+Este projeto permite que você personalize e edite uma barra de notícias RSS para exibir notícias em tempo real em sua página web.
 
 Descrição
 
