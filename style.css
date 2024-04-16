@@ -4,7 +4,7 @@ body {
     color: #E5E5E5; /* Cor clara para o texto */
     font-family: Arial, sans-serif; /* Fonte sem serifa */
     margin: 0;
-    padding: 20px; /* Adiciona espaço ao redor do conteúdo */
+    padding: 80px; /* Adiciona espaço ao redor do conteúdo */
 }
 
 /* Estilo para o ticker de notícias */
@@ -23,7 +23,7 @@ body {
 /* Animação para rolar o ticker de notícias */
 @keyframes scroll {
     from {
-        transform: translateX(0%);
+        transform: translateX(15%);
     }
     to {
         transform: translateX(-100%);
