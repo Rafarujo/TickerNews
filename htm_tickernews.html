@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editor de Barra de Notícias RSS</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS externo -->
+    <style>
+        /* CSS adicionado diretamente para simplicidade */
+        /* Melhore conforme necessário para uma aplicação completa */
+    </style>
+</head>
+
+<body>
+    <h1>RSS TickerNews Editor 1.0</h1>
+
+    <!-- Formulário para editar propriedades da barra de notícias -->
+    <form id="editorForm">
+        <label for="rssUrl">Link do RSS:</label>
+        <input type="url" id="rssUrl" name="rssUrl" value="https://news.google.com/rss?hl=pt-BR&gl=BR&ceid=BR:pt-419">
+
+        <label for="numNews">Quantidade de notícias:</label>
+        <input type="number" id="numNews" name="numNews" min="1" max="30" value="10">
+
+        <label for="fontColor">Cor da fonte:</label>
+        <input type="color" id="fontColor" name="fontColor" value="#ffffff">
+
+        <label for="backgroundColor">Cor do fundo:</label>
+        <input type="color" id="backgroundColor" name="backgroundColor" value="#000000">
+
+        <label for="direction">Direção da animação:</label>
+        <select id="direction" name="direction">
+            <option value="left" selected>Esquerda para a direita</option>
+            <option value="right">Direita para a esquerda</option>
+        </select>
+
+        <label for="speed">Velocidade da animação:</label>
+        <input type="number" id="speed" name="speed" min="10" max="100" value="80">
+
+        <button type="button" onclick="updateNewsTicker()">Atualizar barra de notícias</button>
+        <button type="button" onclick="copyHtmlCode()">Copiar código HTML</button>
+    </form>
+
+    <!-- Pré-visualização da barra de notícias -->
+    <div class="news-ticker">
+        <div class="news-ticker-container" id="newsContainer"></div>
+    </div>
+
+    <!-- Caixa de texto para exibir o código HTML -->
+    <h2>Código HTML:</h2>
+    <textarea id="htmlCode" rows="10" cols="80" readonly></textarea>
+
+    <script src="script.js"></script> <!-- Link para o arquivo JavaScript externo -->
+</body>
+
+</html>

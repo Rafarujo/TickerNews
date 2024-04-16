@@ -1,0 +1,122 @@
+/* Estilo global para o corpo */
+body {
+    background-color: #1C1C1C; /* Cor escura para o fundo */
+    color: #E5E5E5; /* Cor clara para o texto */
+    font-family: Arial, sans-serif; /* Fonte sem serifa */
+    margin: 0;
+    padding: 20px; /* Adiciona espaço ao redor do conteúdo */
+}
+
+/* Estilo para o ticker de notícias */
+.news-ticker {
+    padding: 10px 20px;
+    font-size: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    height: auto;
+    color: var(--font-color, #E5E5E5); /* Cor clara para o texto */
+    background-color: var(--background-color, #313131); /* Cor escura para o fundo */
+    margin-bottom: 20px; /* Espaço entre o ticker e outros elementos */
+}
+
+/* Animação para rolar o ticker de notícias */
+@keyframes scroll {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Contêiner do ticker */
+.news-ticker-container {
+    display: inline-block;
+    white-space: nowrap;
+    animation-duration: var(--animation-speed, 80s);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+    color: var(--font-color, #E5E5E5);
+    animation-direction: normal;
+}
+
+/* Estilo para cada item de notícia */
+.news-item {
+    display: inline-block;
+    margin-right: 20px;
+    white-space: nowrap;
+    color: var(--font-color, #E5E5E5);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Estilo do formulário */
+form {
+    margin-bottom: 20px;
+    background-color: #282828; /* Cor escura para o fundo do formulário */
+    padding: 20px;
+    border-radius: 5px;
+    color: #E5E5E5; /* Cor clara para o texto */
+    font-family: Arial, sans-serif; /* Fonte sem serifa */
+}
+
+/* Ajusta a margem dos elementos do formulário */
+form label,
+form input,
+form select {
+    display: block;
+    margin-bottom: 15px; /* Espaço entre os elementos do formulário */
+}
+
+input,
+select {
+    width: 100%; /* Garante que os inputs e selects preencham a largura do contêiner */
+    padding: 8px; /* Adiciona espaço interno aos inputs e selects */
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #3A3A3A; /* Cor escura para o fundo dos inputs */
+    color: #E5E5E5; /* Cor clara para o texto */
+    font-family: Arial, sans-serif; /* Fonte sem serifa */
+}
+
+/* Estilo para os botões */
+button {
+    padding: 10px 15px; /* Espaço interno dos botões */
+    margin-right: 10px; /* Espaço entre botões */
+    background-color: #3A3A3A; /* Cor escura para o fundo do botão */
+    color: #E5E5E5; /* Cor clara para o texto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #00A336; /* Destaque nos botões ao passar o mouse */
+    color: #E5E5E5; /* Cor escura para o texto nos botões ao passar o mouse */
+}
+
+/* Estilo para a caixa de texto do código HTML */
+textarea#htmlCode {
+    background-color: #2D2D2D; /* Cor de fundo preta */
+    color: #E5E5E5; /* Cor do texto clara */
+    padding: 10px; /* Espaçamento interno para afastar o texto das bordas */
+    border: 1px solid #444; /* Borda escura */
+    border-radius: 5px; /* Canto arredondado */
+    width: 80%; /* Largura total */
+    height: 100px; /* Altura ajustada */
+    resize: vertical; /* Permitir redimensionar verticalmente */
+    font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada */
+}
+/* Estilo para o input de cor */
+input[type="color"] {
+    width: 30px; /* Largura do input */
+    height: 30px; /* Altura do input */
+    padding: 0; /* Remove o padding interno */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Borda com cantos arredondados */
+    background: none; /* Remove o fundo padrão */
+    cursor: pointer; /* Mostra o cursor ao passar sobre o input */
+}
