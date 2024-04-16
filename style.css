@@ -72,7 +72,7 @@ form select {
 
 input,
 select {
-    width: 100%; /* Garante que os inputs e selects preencham a largura do contêiner */
+    width: 80%; /* Garante que os inputs e selects preencham a largura do contêiner */
     padding: 8px; /* Adiciona espaço interno aos inputs e selects */
     border: 1px solid #555;
     border-radius: 5px;
@@ -106,7 +106,7 @@ textarea#htmlCode {
     border: 1px solid #444; /* Borda escura */
     border-radius: 5px; /* Canto arredondado */
     width: 80%; /* Largura total */
-    height: 100px; /* Altura ajustada */
+    height: 400px; /* Altura ajustada */
     resize: vertical; /* Permitir redimensionar verticalmente */
     font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada */
 }
