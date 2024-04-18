@@ -5,51 +5,64 @@
     <meta charset="UTF-8">
     <title>Editor de Barra de Notícias RSS</title>
     <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS externo -->
-    <style>
-        /* CSS adicionado diretamente para simplicidade */
-        /* Melhore conforme necessário para uma aplicação completa */
-    </style>
 </head>
 
 <body>
-    <h1>RSS TickerNews Editor</h1><h3>v1.0</h3>
+    <h1>RSS TickerNews Editor</h1><h3>v2.0</h3>
 
-    <!-- Formulário para editar propriedades da barra de notícias -->
-    <form id="editorForm">
-        <label for="rssUrl">Link do RSS:</label>
-        <input type="url" id="rssUrl" name="rssUrl" value="https://news.google.com/rss?hl=pt-BR&gl=BR&ceid=BR:pt-419">
+    <!-- Contêiner para organizar o layout da página -->
+    <div style="display: flex; gap: 20px;">
+        <!-- Formulário para editar propriedades da barra de notícias -->
+        <form id="editorForm" style="flex: 1;">
+            <label for="rssUrl">Link do RSS:</label>
+            <input type="url" id="rssUrl" name="rssUrl" value="https://news.google.com/rss?hl=pt-BR&gl=BR&ceid=BR:pt-419">
 
-        <label for="numNews">Quantidade de notícias:</label>
-        <input type="number" id="numNews" name="numNews" min="1" max="30" value="10">
+            <label for="numNews">Quantidade de notícias:</label>
+            <input type="number" id="numNews" name="numNews" min="1" max="30" value="10">
 
-        <label for="fontColor">Cor da fonte:</label>
-        <input type="color" id="fontColor" name="fontColor" value="#ffffff">
+            <label for="fontColor">Cor da fonte:</label>
+            <input type="color" id="fontColor" name="fontColor" value="#ffffff">
 
-        <label for="backgroundColor">Cor do fundo:</label>
-        <input type="color" id="backgroundColor" name="backgroundColor" value="#AD0000">
+            <label for="backgroundColor">Cor do fundo:</label>
+            <input type="color" id="backgroundColor" name="backgroundColor" value="#166600">
 
-        <label for="direction">Direção da animação:</label>
-        <select id="direction" name="direction">
-            <option value="left" selected>Esquerda para a direita</option>
-            <option value="right">Direita para a esquerda</option>
-        </select>
+            <label for="direction">Direção da animação:</label>
+            <select id="direction" name="direction">
+                <option value="left" selected>Direita para a esquerda</option>
+                <option value="right">Esquerda para a direita</option>
+            </select>
 
-        <label for="speed">Velocidade da animação:</label>
-        <input type="number" id="speed" name="speed" min="10" max="100" value="80">
+            <label for="speed">Velocidade da animação:</label>
+            <input type="number" id="speed" name="speed" min="10" max="100" value="80">
 
-        <button type="button" onclick="updateNewsTicker()">Atualizar barra de notícias</button>
-        <button type="button" onclick="copyHtmlCode()">Copiar código HTML</button>
-    </form>
+            <label for="fontSize">Tamanho da fonte (px):</label>
+            <input type="number" id="fontSize" name="fontSize" min="10" max="50" value="16"> <!-- Adicione a entrada de tamanho da fonte -->
+            
+            <button type="button" onclick="updateNewsTicker()">Atualizar barra de notícias</button>
+        </form>
+
+        <!-- Caixa de texto para exibir o código HTML -->
+        <div style="flex: 1;">
+        
+            <textarea id="htmlCode" rows="15" cols="60" readonly style="width: 100%;"></textarea>
+            
+            <!-- Botão para copiar o código HTML -->
+            <button type="button" onclick="copyHtmlCode()">Copiar código HTML</button>
+        </div>
+    </div>
 
     <!-- Pré-visualização da barra de notícias -->
     <div class="news-ticker">
         <div class="news-ticker-container" id="newsContainer"></div>
     </div>
-
-    <!-- Caixa de texto para exibir o código HTML -->
-    <h3>Código HTML:</h3>
-    <textarea id="htmlCode" rows="10" cols="80" readonly></textarea>
-
+<label for="languageSelector">Idioma:</label>
+<select id="languageSelector" onchange="changeLanguage()">
+    <option value="pt">Português</option>
+    <option value="en">English</option>
+</select>
+<footer>
+        <p>Desenvolvido por <a href="https://github.com/Rafarujo/TickerNews/tree/main" target="_blank">Rafarujo</a></p>
+    </footer>
     <script src="script.js"></script> <!-- Link para o arquivo JavaScript externo -->
 </body>
 
